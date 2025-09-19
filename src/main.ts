@@ -1,16 +1,10 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import { provideRouter } from '@angular/router';
 import { AppComponent } from './app/app';
-import { provideRouter, Routes } from '@angular/router';
-import { Layout } from './app/layout/layout';
-
-
-const routes: Routes = [
-  { path: '', component: Layout }
-];
+import { routes } from './app/app.routes'; // якщо створили окремий файл для маршрутів
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes)
+    provideRouter(routes) // підключаємо маршрути
   ]
-});
+}).catch(err => console.error(err));

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Layout } from './layout/layout';
+import { RouterModule } from '@angular/router';
+import { LayoutComponent } from './layout/layout';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Layout],
-  template: '<router-outlet></router-outlet>'
+  imports: [RouterModule, LayoutComponent], // підключаємо маршрути та LayoutComponent
+  template: '<router-outlet></router-outlet>' // тут відображаються маршрути
 })
 export class AppComponent {}

@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router'; // імпортуємо RouterOutlet
 
 @Component({
   selector: 'app-layout',
-  imports: [],
   templateUrl: './layout.html',
-  styleUrl: './layout.css'
+  styleUrls: ['./layout.css'],
+  standalone: true, // standalone компонент
+  imports: [RouterOutlet] // додаємо сюди
 })
-export class Layout {
-  appTitle = 'Web-дизайн';
+export class LayoutComponent {
+  appTitle = 'Мій Angular Додаток';
 }
