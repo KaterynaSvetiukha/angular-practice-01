@@ -9,5 +9,5 @@ import { RouterOutlet } from '@angular/router'; // імпортуємо RouterOu
   imports: [RouterOutlet] // додаємо сюди
 })
 export class LayoutComponent {
-  appTitle = 'Мій Angular Додаток';
+  appTitle = 'Web-дизайн';
 }
