@@ -4,4 +4,5 @@ export interface DesignProject {
     description: string;
     tools: string[];
     imageUrl: string;
+    special?: boolean;
 }

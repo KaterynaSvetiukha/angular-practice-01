@@ -1,6 +1,11 @@
-<div class="card">
+<div class="card"
+     [ngClass]="{ 'card--special' : project.special }">
     <img src="{{ project.imageUrl}}" alt="{{ project.title}}">
     <h2> {{ project.title }}</h2>
     <p>{{ project.description }}</p>
     <p><strong>Tools:</strong>{{ project.tools.join(', ') }}</p>
+
+    <span *ngIf="project.special" class="badge badge--special"
+    [ngStyle]="{ 'color': project.special ? 'white' : 'black',
+     'font-weight': project.special ? 'bold' : 'normal' }">⭐ Special Project</span>
 </div>
