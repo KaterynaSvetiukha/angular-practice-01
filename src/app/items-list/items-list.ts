@@ -13,7 +13,7 @@ import { DesignProject } from '../shared/models/design-project.model';
 export class ItemsList {
   designProjects: DesignProject[] = [
     {
-      id: '1', title: 'landing Page', description: 'Сучасний лендінг для IT-компанії',
+      id: '1', title: 'Landing Page', description: 'Сучасний лендінг для IT-компанії',
       tools: ['Figma', 'Photoshop'],
       imageUrl: 'https://mir-s3-cdn-cf.behance.net/projects/max_808/6c73c4194070583.Y3JvcCwyMjY0LDE3NzEsMTE3LDA.png',
       special: true

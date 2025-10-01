@@ -22,6 +22,7 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(90deg, #ececec, #a3a3a3);
         }
 
         /* Центрування навігаційного меню */
@@ -62,9 +63,9 @@
         }
 
         .card--special {
-            border: 2px solid rgb(0, 0, 0);
+            border: 1px solid #000;
             border-radius: 5%;
-            background-color: #fff5f5;
+            background-color: transparent;
             padding: 5px 5px 15px 5px;
         }
         

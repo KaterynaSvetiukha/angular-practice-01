@@ -1,5 +1,11 @@
 <header>
-  <h1>{{ appTitle }}</h1>
+  <div class="logo">{{ appTitle }}</div>
+  <nav class="nav">
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/" routerLinkActive="active">About</a>
+    <a routerLink="/" routerLinkActive="active">Projects</a>
+    <a routerLink="/" routerLinkActive="active">Contact</a>
+  </nav>
 </header>
 
 <main>
@@ -8,6 +14,10 @@
   </div>
 </main>
 
-<footer>
-  <p>&copy; 2025 My App</p>
+<footer class="app-footer">
+  <p>&copy; 2025 Web-дизайн. Усі права захищено.</p>
+  <div class="socials">
+    <a href="#"><i class="fab fa-facebook">Instagram</i></a>
+    <a href="#"><i class="fab fa-github">GitHub</i></a>
+  </div>
 </footer>
