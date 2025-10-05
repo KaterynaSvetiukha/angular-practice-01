@@ -1,4 +1,16 @@
-<div class="container">
-  <app-item-card *ngFor="let project of designProjects" [project]="project"></app-item-card>
+<div class="search container">
+  <input
+  class="input-search"
+    type="text"
+    [(ngModel)]="searchText"
+    placeholder="Search projects..."
+  />
 </div>
 
+<div class="container">
+  <app-item-card
+    *ngFor="let project of getFilteredProject()"
+    [project]="project"
+    (selectProject)="onProjectSelected($event)">
+  </app-item-card>
+</div>

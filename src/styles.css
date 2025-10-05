@@ -2,86 +2,47 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        header, footer {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px;
-        }
+header,
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
 
-        main {
-            margin: 10px 0; 
-            max-width: 1300px;
-            align-items: center;
-        }
+main {
+  margin: 10px 0;
+  max-width: 1300px;
+  align-items: center;
+}
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(90deg, #ececec, #a3a3a3);
-        }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(90deg, #ececec, #a3a3a3);
+}
 
-        /* Центрування навігаційного меню */
-        .navbar-nav {
-            justify-content: center;
-            flex-grow: 1;
-            /* Дозволяє меню займати доступний простір і бути по центру */
-        }
+/* Центрування навігаційного меню */
+.navbar-nav {
+  justify-content: center;
+  flex-grow: 1;
+  /* Дозволяє меню займати доступний простір і бути по центру */
+}
 
-        /* Правий край для форми пошуку та авторизації */
-        .d-flex.align-items-center {
-            justify-content: flex-end;
-        }
+/* Правий край для форми пошуку та авторизації */
+.d-flex.align-items-center {
+  justify-content: flex-end;
+}
 
-        .container {
-            display:flex;
-            flex-wrap: wrap;
-            justify-content:flex-start;
-            flex-direction: row;
-            gap: 50px;
-            margin: 0 0 0 60px;
-            
-        }
-
-        .card {
-            min-width: 48%;
-        }
-
-        .card p {
-            width: 500px;
-        }
-
-        .card img {
-            object-fit: cover;
-            width: 550px;
-            height: 300px;
-            border-radius: 5%;
-        }
-
-        .card--special {
-            border: 1px solid #000;
-            border-radius: 5%;
-            background-color: transparent;
-            padding: 5px 5px 15px 5px;
-        }
-        
-        .badge {
-            position: relative;
-            float: right;
-            padding: 3px 6px;
-            margin-top: -60px;
-            font-size: 12px;
-            border-radius: 4px;
-            background-color: gray;
-            color: white;
-        }
-
-        .badge--special {
-            background-color: rgb(0, 0, 0);
-            color: rgb(79, 18, 18);
-            font-weight: bold;
-        }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 50px;
+  margin: 0 0 0 60px;
+}

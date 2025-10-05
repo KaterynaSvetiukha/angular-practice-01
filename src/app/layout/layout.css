@@ -3,7 +3,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    padding: 15px 40px;
+    padding: 15px 20px;
     color: black;
 }
 
@@ -32,7 +32,7 @@ header {
     background: transparent;
     color: black;
     text-align: center;
-    padding: 20px 20px 15px 20px;
+    padding: 50px 20px 15px 20px;
     margin-top: auto;
 }
 
@@ -50,4 +50,9 @@ header {
 .app-footer .socials a:hover {
     color: black;
     cursor: pointer;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0.3px solid rgb(149, 148, 148);
 }

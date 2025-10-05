@@ -7,5 +7,7 @@
 
     <span *ngIf="project.special" class="badge badge--special"
     [ngStyle]="{ 'color': project.special ? 'white' : 'black',
-     'font-weight': project.special ? 'bold' : 'normal' }">⭐ Special Project</span>
+     'font-weight': project.special ? 'bold' : 'normal' }">🔗 Special Project</span>
+
+     <button class="details" (click)="onSelect()">Details</button>
 </div>
