@@ -4,12 +4,13 @@
     type="text"
     [(ngModel)]="searchText"
     placeholder="Search projects..."
+    (input)="onSearch($event.target.value)"
   />
 </div>
 
 <div class="container">
   <app-item-card
-    *ngFor="let project of getFilteredProject()"
+    *ngFor="let project of designProjects"
     [project]="project"
     (selectProject)="onProjectSelected($event)"
   >

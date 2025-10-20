@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DesignProject } from '../shared/models/design-project.model';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -40,10 +41,33 @@ export class Data {
       imageUrl:
         'https://mir-s3-cdn-cf.behance.net/project_modules/1400/c80c05166220105.641458fe523dc.jpg',
       special: false,
-    }
+    },
   ];
 
-  getItems():DesignProject[] {
-    return this.designProjects;
+  private itemSubject: BehaviorSubject<DesignProject[]> = new BehaviorSubject<DesignProject[]>(
+    this.designProjects
+  );
+  designProjects$: Observable<DesignProject[]> = this.itemSubject.asObservable();
+
+  constructor() {}
+
+  getItems(): Observable<DesignProject[]> {
+    return of(this.designProjects);
+  }
+
+  updateItems(newProjects: DesignProject[]): void {
+    this.itemSubject.next(newProjects);
+  }
+
+  getFilteredProject(searchText: string): void {
+    const text = searchText.toLowerCase();
+
+    const filtered = this.designProjects.filter(
+      (project) =>
+        project.title.toLowerCase().includes(text) ||
+        project.description.toLowerCase().includes(text)
+    );
+
+    this.updateItems(filtered);
   }
 }
