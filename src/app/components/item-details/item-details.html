@@ -1,0 +1,16 @@
+<div *ngIf="project; else notFound" class="details-container">
+  <div class="title">
+    <h2>{{ project.title }}</h2>
+    <img [src]="project.imageUrl" alt="{{ project.title }}" />
+  </div>
+  <div class="describe">
+    <p>{{ project.description }}</p><br>
+    <p><strong>Tools: </strong> {{ project.tools.join(', ') }}</p>
+  </div>
+  <a routerLink="/projects" class="back-btn">Back</a>
+</div>
+
+<ng-template #notFound>
+  <p>Проєкт не знайдено.</p>
+  <a routerLink="/projects" class="back-btn">Back</a>
+</ng-template>

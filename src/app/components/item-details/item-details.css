@@ -1,0 +1,58 @@
+.details-container {
+  display: flex;
+  flex: row;
+  justify-content: flex-start;
+  width: 95%;
+  margin: 0 0 0 60px;
+}
+
+.title {
+  width: 45%;
+}
+
+.describe {
+  margin-left: 20px;
+  width: 52%;
+  margin-top: 45px;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  margin: 15px auto;
+  height: 350px;
+  object-fit: cover;
+}
+
+.back-btn {
+  position: absolute;
+  right: 10%;
+  top: 63%;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.back-btn:hover {
+  cursor: pointer;
+  background-color: rgb(65, 65, 65);
+  transition-duration: 0.3s;
+}
+
+.back-btn:active {
+  background-color: rgb(40, 40, 40);
+  scale: 1.03;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
