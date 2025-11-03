@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { DesignProject } from '../shared/models/design-project.model';
 import { Input, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ShortPipe } from '../pipes/short-pipe';
+import { HoverStyle } from '../directives/hover-style';
 
 @Component({
   selector: 'app-item-card',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ShortPipe, HoverStyle],
   templateUrl: './item-card.html',
   styleUrls: ['./item-card.css'],
 })

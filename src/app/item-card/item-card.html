@@ -1,7 +1,9 @@
-<div class="card"
+<div class="card" appHoverStyle hoverShadow = '2px 2px 10px rgba(0, 0, 0, 0.3)'
      [ngClass]="{ 'card--special' : project.special }">
     <img src="{{ project.imageUrl}}" alt="{{ project.title}}">
     <h2> {{ project.title }}</h2>
+
+    <p>{{ project.short_sub | short }}</p>
 
     <span *ngIf="project.special" class="badge badge--special"
     [ngStyle]="{ 'color': project.special ? 'white' : 'black',

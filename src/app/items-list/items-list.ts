@@ -1,32 +1,26 @@
-import { Component, OnInit, OnDestroy} from '@angular/core';
+import { Component} from '@angular/core';
 import { NgFor } from '@angular/common';
 import { ItemCard } from '../item-card/item-card';
 import { DesignProject } from '../shared/models/design-project.model';
 import { FormsModule } from '@angular/forms';
 import { Data } from '../../app/services/data'
-import { Subscription } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
+import { Observable} from 'rxjs';
 
 
 @Component({
   selector: 'app-items-list',
-  imports: [NgFor, ItemCard, FormsModule],
+  imports: [NgFor, ItemCard, FormsModule, AsyncPipe],
   standalone: true,
   templateUrl: './items-list.html',
   styleUrls: ['./items-list.css'],
 })
-export class ItemsList implements OnInit, OnDestroy {
+export class ItemsList {
   searchText: string = '';
+  designProjects$!: Observable<DesignProject[]>
 
-  designProjects: DesignProject[] = [];
-
-  private sub!: Subscription;
-
-  constructor(public data: Data) {}
-
-  ngOnInit(): void {
-    this.sub = this.data.designProjects$.subscribe((projects) => {
-      this.designProjects = projects;
-    });
+  constructor(public data: Data) {
+    this.designProjects$ = this.data.designProjects$;
   }
 
   onProjectSelected(project: DesignProject) {
@@ -45,11 +39,5 @@ export class ItemsList implements OnInit, OnDestroy {
 
   onSearch(term: string): void {
     this.data.getFilteredProject(term);
-  }
-
-  ngOnDestroy(): void {
-    if (this.sub) {
-      this.sub.unsubscribe();
-    }
   }
 }

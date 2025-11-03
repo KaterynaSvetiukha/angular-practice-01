@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Data } from '../../services/data';
 import { DesignProject } from '../../shared/models/design-project.model';
 
+
 @Component({
   selector: 'app-item-details',
   imports: [RouterModule, CommonModule],

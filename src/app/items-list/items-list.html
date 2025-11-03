@@ -10,7 +10,7 @@
 
 <div class="container">
   <app-item-card
-    *ngFor="let project of designProjects"
+  *ngFor="let project of designProjects$ | async"
     [project]="project"
     (selectProject)="onProjectSelected($event)"
   >
