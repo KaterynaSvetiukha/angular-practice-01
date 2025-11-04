@@ -56,3 +56,9 @@ p {
 a {
   text-decoration: none;
 }
+
+.price {
+  line-height: 200%;
+  font-size: 20px;
+  font-weight: 600;
+}

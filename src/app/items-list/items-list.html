@@ -6,13 +6,15 @@
     placeholder="Search projects..."
     (input)="onSearch($event.target.value)"
   />
+
+  <div class="actions"><a class="btn" routerLink="/item-form">Add Project</a></div>
 </div>
 
 <div class="container">
   <app-item-card
-  *ngFor="let project of designProjects$ | async"
+    *ngFor="let project of designProjects$ | async"
     [project]="project"
-    (selectProject)="onProjectSelected($event)"
+    
   >
   </app-item-card>
 </div>

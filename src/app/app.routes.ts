@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout';
 import { ItemsList } from './items-list/items-list';
 import { ItemDetails } from './components/item-details/item-details';
+import { ItemForm } from './components/item-form/item-form';
 
 export const routes: Routes = [
   {
@@ -11,6 +12,7 @@ export const routes: Routes = [
       { path: 'projects', component: ItemsList },
       { path: 'projects/:id', component: ItemDetails },
       { path: '', redirectTo: 'projects', pathMatch: 'full' },
+      { path: 'item-form', component: ItemForm },
     ],
   },
 ];

@@ -1,3 +1,9 @@
+.search {
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .input-search {
   margin-bottom: 50px;
   height: 40px;
@@ -21,5 +27,32 @@
 }
 
 .input-search::after {
-    transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.actions {
+  float: left;
+  width: 200px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(65, 65, 65);
+  transition-duration: 0.3s;
+}
+
+.btn:active {
+  background-color: rgb(40, 40, 40);
+  scale: 1.03;
 }

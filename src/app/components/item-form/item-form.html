@@ -1,0 +1,63 @@
+<form [formGroup]="newProject" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Title project</label>
+    <input type="text" id="title" formControlName="title" placeholder="Enter title project" />
+    @if(!newProject.controls.title.valid && newProject.controls.title.touched) {
+    <small>This input is required</small>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="short_sub">Short subscribe</label>
+    <input
+      id="short_sub"
+      type="text"
+      formControlName="short_sub"
+      placeholder="Enter short subscribe"
+    />
+    @if(!newProject.controls.title.valid && newProject.controls.title.touched) {
+    <small>Minimum 10 symbols</small>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="description">Enter description project</label>
+    <textarea
+      id="description"
+      rows="5"
+      formControlName="description"
+      placeholder="Enter description"
+    ></textarea>
+    @if(!newProject.controls.description.valid && newProject.controls.description.touched) {
+    <small>Minimum 100 symbols</small>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="imageUrl">Enter image link</label>
+    <input
+      id="imageUrl"
+      formControlName="imageUrl"
+      type="url"
+      placeholder="https://example.com/image.jpg"
+    />
+    @if(!newProject.controls.imageUrl.valid && newProject.controls.imageUrl.touched) {
+    <small>This input is required</small>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="price">Enter price for project</label>
+    <input id="price" formControlName="price" type="text" placeholder="Price" />
+    @if(!newProject.controls.price.valid && newProject.controls.price.touched) {
+    <small>Enter price greater than 0</small>
+    }
+  </div>
+
+  <div class="form-group checkbox">
+    <label for="special">Special offer for project?</label>
+    <input id="special" formControlName="special" type="checkbox" />
+  </div>
+
+  <button type="submit" [disabled]="newProject.invalid">Add Project</button>
+</form>

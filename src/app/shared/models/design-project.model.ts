@@ -6,4 +6,5 @@ export interface DesignProject {
     imageUrl: string;
     special?: boolean;
     short_sub: string;
+    price: string;
 }

@@ -9,5 +9,8 @@
     [ngStyle]="{ 'color': project.special ? 'white' : 'black',
      'font-weight': project.special ? 'bold' : 'normal' }">🔗 Special Project</span>
 
-     <button class="details" [routerLink]="['/projects', project.id]">Details</button>
+     <div class="price_etc">
+          <span class="price">{{project.price}}</span>
+          <button class="details" [routerLink]="['/projects', project.id]">Details</button>
+     </div>
 </div>

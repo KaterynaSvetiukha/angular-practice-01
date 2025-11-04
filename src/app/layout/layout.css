@@ -1,58 +1,15 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    padding: 15px 20px;
-    color: black;
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* вся высота экрана */
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 1px;
+main {
+  flex: 1; /* растягивается и отталкивает футер вниз */
+  display: flex;
+  flex-direction: column;
 }
 
-.nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.5s;
-    color: black;
-}
-
-.nav a:hover,
-.nav a.active {
-    border-bottom: 2px solid #000;
-    transition-duration: 0.5s;
-    cursor: pointer;
-}
-
-.app-footer {
-    background: transparent;
-    color: black;
-    text-align: center;
-    padding: 50px 20px 15px 20px;
-    margin-top: auto;
-}
-
-.app-footer .socials {
-    margin-top: 10px;
-}
-
-.app-footer .socials a {
-    margin: 0 10px;
-    color: black;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.app-footer .socials a:hover {
-    color: black;
-    cursor: pointer;
-}
-
-hr {
-    margin: 20px 0;
-    border: 0.3px solid rgb(149, 148, 148);
+app-footer {
+  margin-top: auto; /* футер всегда прижат к низу */
 }
