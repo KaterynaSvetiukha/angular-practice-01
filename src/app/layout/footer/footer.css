@@ -1,0 +1,29 @@
+
+.app-footer {
+    background: transparent;
+    color: black;
+    text-align: center;
+    padding: 50px 10px 15px 10px;
+    margin-top: auto;
+}
+
+.app-footer .socials {
+    margin-top: 10px;
+}
+
+.app-footer .socials a {
+    margin: 0 10px;
+    color: black;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.app-footer .socials a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0.3px solid rgb(149, 148, 148);
+}

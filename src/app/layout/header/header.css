@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 15px 10px;
+    color: black;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s;
+    color: black;
+}
+
+.nav a:hover,
+.nav a.active {
+    border-bottom: 2px solid #000;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
