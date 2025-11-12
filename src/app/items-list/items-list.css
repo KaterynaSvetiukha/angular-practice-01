@@ -56,3 +56,8 @@
   background-color: rgb(40, 40, 40);
   scale: 1.03;
 }
+
+.no_result {
+  margin: 10% auto;
+  font-size: 20px;
+}

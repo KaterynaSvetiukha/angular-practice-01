@@ -3,6 +3,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Data } from '../../services/data';
 import { DesignProject } from '../../shared/models/design-project.model';
+import { take } from 'rxjs/operators';
 
 
 @Component({
@@ -21,9 +22,14 @@ export class ItemDetails implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
 
     if (id) {
-      this.dataService.designProjects$.subscribe((progects) => {
-        this.project = progects.find(p => p.id === id);
-      })
+      if (this.dataService['itemSubject'].getValue().length === 0) {
+        this.dataService.getItems();
+      }
+        this.dataService.designProjects$
+          .pipe(take(1))
+          .subscribe((projects: DesignProject[]) => {
+            this.project = projects.find((p: DesignProject) => p.id === id);
+          });
     }
   }
 }

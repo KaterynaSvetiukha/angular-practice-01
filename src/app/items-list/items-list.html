@@ -10,11 +10,18 @@
   <div class="actions"><a class="btn" routerLink="/item-form">Add Project</a></div>
 </div>
 
-<div class="container">
-  <app-item-card
-    *ngFor="let project of designProjects$ | async"
+<div class="container" *ngIf="designProjects$ | async as projects">
+  <ng-container *ngIf="projects.length > 0; else noResult">
+    <app-item-card
+    *ngFor="let project of projects"
     [project]="project"
     
   >
   </app-item-card>
+  </ng-container>
+
+  <ng-template #noResult>
+    <p class="no_result">There is no course for your request</p>
+  </ng-template>
+  
 </div>

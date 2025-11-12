@@ -1,11 +1,12 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { ItemCard } from '../item-card/item-card';
 import { DesignProject } from '../shared/models/design-project.model';
 import { FormsModule } from '@angular/forms';
 import { Data } from '../../app/services/data'
 import { AsyncPipe } from '@angular/common';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { switchMap, debounceTime, distinctUntilChanged, startWith } from 'rxjs/operators';
 import { RouterModule } from '@angular/router';
 
 
@@ -16,29 +17,19 @@ import { RouterModule } from '@angular/router';
   templateUrl: './items-list.html',
   styleUrls: ['./items-list.css'],
 })
-export class ItemsList {
+export class ItemsList implements OnInit {
   searchText: string = '';
   designProjects$!: Observable<DesignProject[]>;
 
-  constructor(public data: Data) {
-    this.designProjects$ = this.data.designProjects$;
-  }
-
-  // onProjectSelected(project: DesignProject) {
-  //   console.log('Chose project:', project);
-  // }
-
-  // getFilteredProject():DesignProject[] {
-  //   const text = this.searchText.toLowerCase();
-
-  //   return this.designProjects.filter(
-  //     (project) =>
-  //       project.title.toLowerCase().includes(text) ||
-  //       project.description.toLowerCase().includes(text)
-  //   );
-  // }
+  
+  constructor(public data: Data) {}
 
   onSearch(term: string): void {
     this.data.getFilteredProject(term);
+  }
+
+  ngOnInit() {
+    this.designProjects$ = this.data.designProjects$;
+    this.data.getItems();
   }
 }
