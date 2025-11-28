@@ -1,0 +1,98 @@
+.auth_container {
+  width: 320px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 10px;
+  background: #ecececad;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.auth_container:hover, .auth_container:focus {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.auth_container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.auth_container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth_container .item_form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.auth_container label {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input:focus {
+  outline: none;
+  border-color: #000000;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition-duration: 0.3s;
+  margin-bottom: 3px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(65, 65, 65);
+  transition-duration: 0.3s;
+}
+
+button:active {
+  background-color: rgb(40, 40, 40);
+  scale: 1.03;
+}
+
+button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+.register {
+    text-align: center;
+    font-weight: 600;
+}
+
+small {
+  color: #d9534f;
+  font-size: 13px;
+  margin-top: 4px;
+}
+

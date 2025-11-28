@@ -5,8 +5,7 @@ import { DesignProject } from '../shared/models/design-project.model';
 import { FormsModule } from '@angular/forms';
 import { Data } from '../../app/services/data'
 import { AsyncPipe } from '@angular/common';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { switchMap, debounceTime, distinctUntilChanged, startWith } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { RouterModule } from '@angular/router';
 
 

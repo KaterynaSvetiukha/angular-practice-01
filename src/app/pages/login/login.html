@@ -1,0 +1,23 @@
+<div class="auth_container">
+  <h2>Login</h2>
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div class="item_form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" placeholder="example@gmail.com"  />
+      @if(!form.get('email')?.valid && form.get('email')?.touched) {
+      <small>Uncorrect email</small>
+      }
+    </div>
+    <div class="item_form">
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password" />
+      @if(!form.get('password')?.valid && form.get('password')?.touched) {
+      <small>Uncorrect password</small>
+      }
+    </div>
+    <button type="submit" [disabled]="form.invalid">Login</button>
+  </form>
+
+  <p>Don't have an account? <a href="/register" class="register">Register</a></p>
+</div>

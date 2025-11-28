@@ -6,4 +6,9 @@
     <a routerLink="/projects" routerLinkActive="active">Projects</a>
     <a>Contact</a>
   </nav>
+
+  <div class="auth_button">
+    <a class="login" [routerLink]="['/login']" routerLinkActive="active">Sign in</a>
+    <a class="register" [routerLink]="['/register']" routerLinkActive="active">Sign up</a>
+  </div>
 </header>

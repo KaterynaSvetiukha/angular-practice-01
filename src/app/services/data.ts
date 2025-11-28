@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class Data {
-  public apiUrl = '/projects';
+  public apiUrl = 'http://localhost:3000/projects';
 
   private itemSubject = new BehaviorSubject<DesignProject[]>([]);
   designProjects$ = this.itemSubject.asObservable();
@@ -15,12 +15,15 @@ export class Data {
   constructor(private http: HttpClient) {}
 
   getItems(): void {
-    this.http.get<DesignProject[]>(this.apiUrl).pipe(
-      catchError((err) => {
-        console.error('❌ Error while getting data: ', err);
-        return throwError(() => err);
-      })
-    ).subscribe((projects) => this.itemSubject.next(projects)) ;
+    this.http
+      .get<DesignProject[]>(this.apiUrl)
+      .pipe(
+        catchError((err) => {
+          console.error('❌ Error while getting data: ', err);
+          return throwError(() => err);
+        })
+      )
+      .subscribe((projects) => this.itemSubject.next(projects));
   }
 
   getItemById(id: string): Observable<DesignProject> {

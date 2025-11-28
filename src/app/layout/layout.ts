@@ -9,7 +9,7 @@ import { Footer } from './footer/footer';
   templateUrl: './layout.html',
   styleUrls: ['./layout.css'],
   standalone: true,
-  imports: [RouterOutlet, ItemsList, Header, Footer]
+  imports: [RouterOutlet, Header, Footer]
 })
 export class LayoutComponent {
 }

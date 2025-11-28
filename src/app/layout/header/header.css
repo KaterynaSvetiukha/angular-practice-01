@@ -14,16 +14,45 @@ header {
 }
 
 .nav a {
-    margin-left: 20px;
+    margin-left: 30px;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.5s;
     color: black;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .nav a:hover,
 .nav a.active {
     border-bottom: 2px solid #000;
-    transition-duration: 0.5s;
-    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.auth_button {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth_button a.login, a.register {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.auth_button a.login:hover, a.register:hover {
+  cursor: pointer;
+  background-color: rgb(65, 65, 65);
+  transition-duration: 0.3s;
+}
+
+.auth_button a.login:active, a.register:active {
+  background-color: rgb(40, 40, 40);
+  scale: 1.03;
 }

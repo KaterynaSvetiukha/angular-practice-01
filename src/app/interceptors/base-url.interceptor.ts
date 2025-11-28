@@ -1,13 +1,11 @@
-import { Injectable } from '@angular/core';
-import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpInterceptorFn } from '@angular/common/http';
 
-@Injectable()
-export class BaseUrlInterceptor implements HttpInterceptor {
-  private baseUrl = 'http://localhost:3000'; // де працює json-server
+export const baseUrlInterceptor: HttpInterceptorFn = (req, next) => {
+  const baseUrl = 'http://localhost:3000';
 
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const apiReq = req.clone({ url: `${this.baseUrl}${req.url}` });
-    return next.handle(apiReq);
-  }
-}
+  const cloned = req.clone({
+    url: `${baseUrl}${req.url}`,
+  });
+
+  return next(cloned);
+};

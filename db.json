@@ -67,5 +67,13 @@
       "short_sub": "Stylish responsive website for designers.",
       "price": "8500 UAN"
     }
+  ],
+  "users": [
+    {
+      "id": "1764343205812",
+      "name": "Катерина",
+      "email": "katyasvetyha@gmail.com",
+      "password": "qwert12345"
+    }
   ]
 }
