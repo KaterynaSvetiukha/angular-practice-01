@@ -35,7 +35,7 @@ export class Auth {
 
   getUser(): any | null {
     const s = localStorage.getItem('user');
-    return s ? JSON.parse(s) : null;
+    return s ? JSON.parse(s) : null; // если строка существует, то превращаем её обратно в обьект
   }
 
   isAuthenticated(): boolean {

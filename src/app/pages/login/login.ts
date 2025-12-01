@@ -39,7 +39,7 @@ export class Login {
 
     this.authService.login(this.form.value).subscribe({
       next: () => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/']); // перенаправляем пользователя на главную страницу (/)
       },
       error: () => {
         this.errorMessage = 'Invalid email or password';
