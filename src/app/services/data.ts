@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class Data {
   public apiUrl = 'http://localhost:3000/projects';
 
-  private itemSubject = new BehaviorSubject<DesignProject[]>([]);
+  public itemSubject = new BehaviorSubject<DesignProject[]>([]);
   designProjects$ = this.itemSubject.asObservable();
 
   constructor(private http: HttpClient) {}
